@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f0f0f0;
+  --foreground: #373737;
+
+  --white: #f0f0f0;
+  --primary: #373737;
+  --app-height: 100vh;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--manrope);
+  height: var(--app-height);
+  overflow: hidden;
+}
+mark {
+  opacity: 1;
+  background: transparent;
+  color: #373737;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .styled-select {
+    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none; /* Safari and Chrome */
+    appearance: none;
+  }
+
+  .text h1 {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 700;
+    @screen md {
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 700;
+    }
+
+    @screen lg {
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: 700;
+    }
+  }
+
+  .text p {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+
+    @screen lg {
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: 500;
+    }
+  }
+}
